@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.vishal.spring.service.RemainderService;
+
 @Controller
 public class ArithmeticController 
 {
@@ -14,8 +16,9 @@ public class ArithmeticController
 	{
 		// method that will return the double remainder to user page
 		ModelAndView mav = new ModelAndView();
-		double result = number % dividend;
-		mav.addObject("result", result);
+		// separated the business logic in a service class
+		RemainderService r_service = new RemainderService();
+		mav.addObject("result", r_service.getRemainder(number, dividend));
 		mav.setViewName("index");
 		return mav;
 	}

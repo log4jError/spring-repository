@@ -4,13 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Get Remainder Page</title>
 </head>
 <form action="remainder" method="post">
 	<h3>Simple Remainder Test</h3>
-	Enter the number: <input type="text" id="num" name="num"> <br> Enter
-	the dividend:<input type="text" id="div" name="div"> <br> <input
-		type="submit" value="Click for result"> RESULT: <input
-		type="text" disabled="disabled" value="${result}">
+	<!--  added div tags to add css later -->
+	<div align="center">
+		<div align="center">
+			Enter the number: <input type="text" id="num" name="num"> <br>
+			Enter the dividend:<input type="text" id="div" name="div"> <br>
+			<input type="submit" value="Result"> <br>
+		</div>
+		<!-- changed the display text of button -->
+		RESULT: <input type="text" disabled="disabled" value="${result}">
+	</div>
 </form>
 </html>
